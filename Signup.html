@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Signup</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .form-element {
+            margin-bottom: 20px;
+        }
+
+        .form-element label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-element input {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .form-element input[type="submit"] {
+            background-color:#8a2be2;
+            color: white;
+            cursor: pointer;
+        }
+
+        .form-element input[type="submit"]:hover {
+            background-color: #8a2be2;
+        }
+
+        @media (max-width: 600px) {
+            .form-element label, .form-element input {
+                font-size: 14px;
+            }
+        }
+    </style>
+    <script>
+        function validateSignupForm() {
+            var username = document.forms["signupForm"]["username"].value;
+            var password = document.forms["signupForm"]["password"].value;
+            var phoneNumber = document.forms["signupForm"]["phoneNumber"].value;
+            var email = document.forms["signupForm"]["email"].value;
+            
+            if (username == "" || password == "" || phoneNumber =="" || email=="") {
+                alert("All fields must be filled out.");
+                return false;
+                window.location.href = "Login.html";
+            }else{
+                alert("Sign Up Successful")
+                window.location.href = "Login.html";
+                event.preventDefault();
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Travel Light Sign-Up</h1>
+        <form name="signupForm" onsubmit="return validateSignupForm()">
+            <div class="form-element">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username">
+            </div>
+            <div class="form-element">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password">
+            </div>
+            <div class="form-element">
+                <label for="Phone Number">Phone Number: </label>
+                <input type="text" id="phoneNumber" name="phoneNumber">
+            </div>
+            <div class="form-element">
+                <label for="Email">Email: </label>
+                <input type="text" id="email" name="email">
+            </div>
+            <div class="form-element">
+                <input type="submit" value="Sign up">
+            </div>
+        </form>
+        <p>Already have an account? <a href="login.html">Login</a></p>
+    </div>
+</body>
+</html>

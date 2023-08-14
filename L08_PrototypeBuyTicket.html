@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Buy Ticket Page</title>
+</head>
+<body>
+    <style>
+        body{
+          color:blue;
+          font-family: Arial;
+          background-image: url(458495.jpg);
+          background-size: cover;
+          height: 100vh;
+      
+        }
+        h1{
+          color: #8a2be2;
+          font-family: Arial;
+          font-size: 32px;
+          text-align: center;
+        }
+        h2{
+          color:red;
+          font-family: Arial;
+          text-align: center;
+        }
+        p{
+          font-size: 28px;
+          text-align: center;
+          background-color: white;
+          padding: 15px 32px;
+          text-align: center;
+          
+        }
+        img{
+          width:100%;
+      
+        }
+        a{
+          font-size: 24px;
+         
+        }
+        button{
+          background-color: #8a2be2; 
+          border: none;
+          color: white;
+          padding: 15px 32px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 32px;
+          border-radius: 8px;
+        }
+        div{
+            border: none;
+          color: white;
+          padding: 15px 32px;
+          text-align: center;
+          text-decoration: none;
+          font-size: 32px;
+          border-radius: 8px;
+        }
+        input{
+          font-size: 32px;
+          border-radius: 8px;
+          border-color: #8a2be2;
+
+        }
+        select{
+          font-size: 32px;
+          border-radius: 8px;
+          border-color: #8a2be2;
+        }
+      </style>
+  <h1>Select Ticket</h1>
+  <form>
+    <div>
+        <input type = "text" placeholder="FROM(Location)"/>
+    </div>
+    <div>
+        <input type = "text" placeholder="To(Location)"/>
+    </div>
+    <div>
+        <input type = "text" placeholder="Date"/>
+    </div>
+    <div>
+        <input type = "text" placeholder="Departure Time"/>
+    </div>
+    <div>
+        <input type = "text" placeholder="No. of Passenger"/>
+    </div>
+    <div>
+        <select multiple = "Class">
+            <option> Economy</option>
+            <option> Business</option>
+            <option> First Class</option>
+        </select>
+    </div>
+  </form>
+  <div>
+    <button onclick="ticketFound()"  id = "but">Find Ticket</button>
+</div>
+<script>
+    function ticketFound() {
+        alert("Ticket Found, Total Price is $539")
+        window.location = 'CheckoutPS.html';
+    }
+</script>
+</body>
+</html>
